@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Chat Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Toggle button for sidebar -->
+    <button id="toggle-button" onclick="toggleSidebar()">&#10094;</button>
+
+    <div id="chat-container">
+        <div id="chat-sidebar">
+            <!-- This is where messages will appear -->
+        </div>
+        <div id="chat-box">
+            <div id="message-input">
+                <input type="text" id="user-message" placeholder="Type a message..." />
+                <button id="send-button" onclick="sendMessage()"></button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="chat.js"></script>
+</body>
+
+</html>
