@@ -10,8 +10,10 @@ function toggleSidebar() {
     // Change button icon based on sidebar state
     if (sidebar.classList.contains("collapsed")) {
         toggleButton.innerHTML = "&#10095;"; // Show right arrow when collapsed
+        toggleButton.style.left = "10px"; // Position button outside of collapsed sidebar
     } else {
         toggleButton.innerHTML = "&#10094;"; // Show left arrow when expanded
+        toggleButton.style.left = "calc(25% - 35px)"; // Position button near expanded sidebar
     }
 }
 
