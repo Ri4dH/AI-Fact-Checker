@@ -146,6 +146,5 @@ input[type="text"]::placeholder {
 }
 
 #map-container {
-  margin-bottom: 20px;
-  /* Adds space below the map */
+    margin-bottom: 20px; /* Adds space below the map */
 }
