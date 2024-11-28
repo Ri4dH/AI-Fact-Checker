@@ -1,5 +1,3 @@
-### GitHub README for Your Chrome Extension
-
 # 🔍 Info Checker Chrome Extension
 
 Info Checker is a Chrome extension powered by Google Gemini AI that allows users to verify the truthfulness of selected text on any webpage. With this extension, you can analyze statements and receive detailed explanations if the information is deemed false.
