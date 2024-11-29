@@ -1,67 +1,86 @@
-# 🔍 TruthVerifier Chrome Extension
+# TruthVerifier Chrome Extension
 
-TruthVerifier is a Chrome extension powered by Google Gemini AI that allows users to verify the truthfulness of selected text on any webpage. With this extension, you can analyze statements and receive detailed explanations if the information is deemed false.
+**TruthVerifier** is a Chrome extension that helps you verify the truthfulness of information found online. With just a few clicks, you can highlight a piece of text, check its validity, and view credible sources for further context. The extension features an intuitive interface, a clean design, and reliable AI-backed results.
 
 ---
 
 ## 🚀 Features
-- **True/False Analysis:** Quickly determine if selected text is true or false.
-- **Detailed Explanations:** Get additional context and explanations for false statements.
-- **Modern Design:** A user-friendly interface with a sleek look.
-- **Lightweight and Easy to Use:** Works seamlessly on any website.
+
+1. **Text Verification**: Highlight any text on a webpage and verify its truthfulness.
+2. **Custom Alerts**: Displays clean, styled pop-ups for analysis results, without the default "website says" format.
+3. **AI Integration**:
+   - **Gemini AI**: Provides analysis based on its training data.
+   - **Google Custom Search API**: Retrieves live, credible sources to support the analysis.
+4. **Seamless User Experience**:
+   - Automatically closes the extension popup after initiating a check.
+   - Displays analysis results in a concise, visually appealing custom alert.
+5. **Error Handling**: Alerts users if no text is selected or if there are API issues.
 
 ---
 
-## ⚙️ Before You Begin
+## 🛠️ Installation
 
-To use this extension, you must add your own Google Gemini API key.
-
-### Steps to Add Your API Key
-1. Open the `background.js` file in the extension's folder.
-2. Locate the following line:
-   ```javascript
-   const apiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=YOUR_API_KEY";
-   ```
-3. Replace `YOUR_API_KEY` with your Google Gemini API key.
-4. Save the file.
-
-
-📖 How to Use
-
-1. **Install the Extension**:
-   - Open `chrome://extensions/` in your browser.
-   - Enable "Developer mode" (toggle in the top-right corner).
-   - Click **"Load unpacked"** and select the folder containing the extension files.
-
-2. **Select Text**:
-   - Highlight any text on a webpage.
-
-3. **Analyze**:
-   - Click on the extension icon in your browser.
-   - Click the **Check Information** button.
-
-4. **Results**:
-   - A popup will display whether the information is true or false.
-   - If false, the popup may include a detailed explanation.
+1. Clone or download this repository.
+2. Open **chrome://extensions/** in your Chrome browser.
+3. Enable **Developer Mode** (toggle in the top-right corner).
+4. Click on **Load unpacked** and select the project folder.
+5. Add your **Gemini API Key** and **Google Custom Search API Key**:
+   - Open `background.js` and replace the placeholders with your API keys:
+     ```javascript
+     const geminiApiEndpoint = "https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=YOUR_GEMINI_API_KEY";
+     const googleSearchApiKey = "YOUR_GOOGLE_SEARCH_API_KEY";
+     const searchEngineId = "YOUR_SEARCH_ENGINE_ID";
+     ```
 
 ---
 
-## 🛠️ Technologies Used
-- **Google Gemini AI API**
-- **HTML, CSS, and JavaScript**
-- **Chrome Extensions Framework**
+## 🖥️ How to Use
+
+1. Navigate to any webpage in Chrome.
+2. Select a piece of text you want to verify.
+3. Open the TruthVerifier extension and click the **Check Information** button.
+4. The extension will:
+   - Close the popup automatically.
+   - Display a custom alert with the analysis results:
+     - **True**: Indicates the statement is correct.
+     - **False**: Provides an explanation and links to credible sources for verification.
 
 ---
 
-## 🤝 Contributing
-Contributions are welcome! Feel free to submit a pull request or open an issue for feedback, bugs, or enhancements.
+## 🌟 Design
+
+TruthVerifier features a modern, clean design with a consistent color scheme:
+
+- **Background**: Light yellowish-beige (`#fffbec`).
+- **Primary Colors**: Orange (`#ff8c00`) and Green (`#4caf50`).
+- **Font**: Arial, ensuring readability and simplicity.
+- **Custom Alerts**: Styled to mimic native Chrome alerts, featuring a scrollable area for long results and clickable links for further verification.
 
 ---
 
-## 📜 License
-This project is licensed under the MIT License. See the `LICENSE` file for details.
+## ⚠️ Known Limitations
+
+1. **Gemini AI Knowledge Cutoff**:
+   - The Gemini API is trained on data up to September 2021 and does not have access to real-time information.
+2. **Custom Search API Dependency**:
+   - The extension relies on Google's Custom Search API to provide live results, so ensure your API key and Search Engine ID are correctly configured.
 
 ---
 
-## ✨ Acknowledgments
-Special thanks to [Google Gemini AI](https://aistudio.google.com/) for providing the powerful API that makes this extension possible.
+## 🛠️ Built With
+
+- **JavaScript**: Core logic for interaction and analysis.
+- **Chrome Extensions API**: To integrate with browser functionality.
+- **Gemini AI**: For AI-backed analysis.
+- **Google Custom Search API**: For real-time data retrieval.
+
+
+## 📈 What's Next?
+
+- **Enhanced Context Analysis**: Improve the explanation with more detailed reasoning.
+- **UI Enhancements**: Add animation and additional customization options for the alert pop-up.
+- **Multi-Language Support**: Expand support for non-English text verification.
+
+---
+
+Let me know if you'd like any further updates or tweaks! 🚀
