@@ -82,5 +82,3 @@ TruthVerifier features a modern, clean design with a consistent color scheme:
 - **Multi-Language Support**: Expand support for non-English text verification.
 
 ---
-
-Let me know if you'd like any further updates or tweaks! 🚀
