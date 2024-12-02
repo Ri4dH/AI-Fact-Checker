@@ -13,6 +13,7 @@
    - **Google Custom Search API**: Retrieves live, credible sources to support the analysis.
 4. **Seamless User Experience**:
    - Automatically closes the extension popup after initiating a check.
+   - Features a movable answer pop-up, allowing users to easily reposition it for convenience.
    - Displays analysis results in a concise, visually appealing custom alert.
 5. **Error Handling**: Alerts users if no text is selected or if there are API issues.
 
